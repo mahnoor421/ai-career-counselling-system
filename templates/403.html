@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}Access Denied - AI Career Counselor{% endblock %}
+
+{% block extra_css %}
+<style>
+    .error-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 70vh;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .error-code {
+        font-size: 5rem;
+        font-weight: 700;
+        color: #ffc107;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .error-title {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    .error-message {
+        color: #666;
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+        max-width: 500px;
+    }
+
+    .error-icon {
+        font-size: 4rem;
+        color: #ffc107;
+        margin-bottom: 30px;
+    }
+
+    .btn-group {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+        background: #0d6efd;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background: #0b5ed7;
+        box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+        background: white;
+        color: #0d6efd;
+        border: 2px solid #0d6efd;
+    }
+
+    .btn-secondary:hover {
+        background: #f0f7ff;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="error-container">
+    <div class="error-icon"><i class="bi bi-shield-lock"></i></div>
+    <div class="error-code">403</div>
+    <h1 class="error-title">Access Denied</h1>
+    <p class="error-message">
+        You don't have permission to access this page. 
+        Please log in or contact support for assistance.
+    </p>
+
+    <div class="btn-group">
+        <a href="/" class="btn btn-primary">
+            <i class="bi bi-house"></i> Go to Home
+        </a>
+        <a href="/login" class="btn btn-secondary">
+            <i class="bi bi-box-arrow-in-right"></i> Login
+        </a>
+    </div>
+</div>
+{% endblock %}

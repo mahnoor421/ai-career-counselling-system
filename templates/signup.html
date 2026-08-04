@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up - AI Career Counselor{% endblock %}
+
+{% block extra_css %}
+<style>
+    .auth-container {
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 40px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .auth-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .auth-header h2 {
+        color: #0d6efd;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .auth-header p {
+        color: #666;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-label {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+        outline: none;
+    }
+
+    .btn-submit {
+        width: 100%;
+        background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn-submit:hover {
+        box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+    }
+
+    .auth-link {
+        text-align: center;
+        margin-top: 20px;
+        color: #666;
+    }
+
+    .auth-link a {
+        color: #0d6efd;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .auth-link a:hover {
+        text-decoration: underline;
+    }
+
+    .divider {
+        text-align: center;
+        margin: 30px 0;
+        color: #999;
+        position: relative;
+    }
+
+    .divider:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        background: #e0e0e0;
+    }
+
+    .divider span {
+        background: white;
+        padding: 0 10px;
+        position: relative;
+    }
+
+    .password-requirements {
+        background: #f0f7ff;
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 15px;
+        font-size: 0.9rem;
+        color: #333;
+    }
+
+    .password-requirements li {
+        margin: 5px 0;
+    }
+
+    @media (max-width: 768px) {
+        .auth-container {
+            margin: 20px;
+            padding: 20px;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-header">
+        <h2><i class="bi bi-person-plus"></i> Create Account</h2>
+        <p>Join us to save your career predictions and track progress</p>
+    </div>
+
+    <form method="POST" action="/signup" id="signupForm">
+        <div class="form-group">
+            <label class="form-label" for="name">
+                <i class="bi bi-person"></i> Full Name
+            </label>
+            <input 
+                class="form-control" 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder="Your full name" 
+                required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="email">
+                <i class="bi bi-envelope"></i> Email Address
+            </label>
+            <input 
+                class="form-control" 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="your@email.com" 
+                required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="password">
+                <i class="bi bi-lock"></i> Password
+            </label>
+            <input 
+                class="form-control" 
+                type="password" 
+                id="password" 
+                name="password" 
+                placeholder="At least 6 characters" 
+                required>
+            
+            <div class="password-requirements">
+                <strong>Password requirements:</strong>
+                <ul style="margin: 10px 0 0 20px;">
+                    <li>✓ At least 6 characters</li>
+                    <li>✓ Mix of uppercase and lowercase</li>
+                    <li>✓ Include numbers or special characters</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="confirm_password">
+                <i class="bi bi-lock"></i> Confirm Password
+            </label>
+            <input 
+                class="form-control" 
+                type="password" 
+                id="confirm_password" 
+                name="confirm_password" 
+                placeholder="Re-enter your password" 
+                required>
+        </div>
+
+        <button type="submit" class="btn-submit">
+            <i class="bi bi-person-plus"></i> Create My Account
+        </button>
+    </form>
+
+    <div class="divider">
+        <span>Or</span>
+    </div>
+
+    <div class="auth-link">
+        <p>Already have an account? <a href="/login">Login here</a></p>
+    </div>
+
+    <div class="auth-link" style="margin-top: 40px;">
+        <a href="/">← Back to Home</a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById('signupForm').addEventListener('submit', function(e) {
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm_password').value;
+    
+    if (password !== confirmPassword) {
+        e.preventDefault();
+        alert('Passwords do not match!');
+        return;
+    }
+    
+    if (password.length < 6) {
+        e.preventDefault();
+        alert('Password must be at least 6 characters!');
+        return;
+    }
+});
+</script>
+{% endblock %}

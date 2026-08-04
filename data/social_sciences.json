@@ -1,0 +1,99 @@
+{
+  "Social Sciences & Humanities": {
+
+    "Psychology": {
+      "careers": [
+        "Psychologist",
+        "Clinical Psychologist",
+        "Counselor",
+        "Mental Health Specialist",
+        "Researcher"
+      ]
+    },
+
+    "Sociology": {
+      "careers": [
+        "Sociologist",
+        "Social Researcher",
+        "Community Development Officer",
+        "Policy Analyst"
+      ]
+    },
+
+    "Political Science": {
+      "careers": [
+        "Political Analyst",
+        "Policy Advisor",
+        "Government Officer",
+        "Research Analyst"
+      ]
+    },
+
+    "International Relations": {
+      "careers": [
+        "Diplomat",
+        "Foreign Affairs Officer",
+        "International Relations Analyst",
+        "Policy Researcher"
+      ]
+    },
+
+    "Law (LLB)": {
+      "careers": [
+        "Lawyer",
+        "Legal Advisor",
+        "Corporate Lawyer",
+        "Legal Researcher",
+        "Judge (after required qualifications)"
+      ]
+    },
+
+    "Education": {
+      "careers": [
+        "Teacher",
+        "Education Officer",
+        "Curriculum Developer",
+        "School Administrator",
+        "Education Consultant"
+      ]
+    },
+
+    "History": {
+      "careers": [
+        "Historian",
+        "Researcher",
+        "Museum Curator",
+        "Archive Specialist"
+      ]
+    },
+
+    "Geography": {
+      "careers": [
+        "Geographer",
+        "GIS Specialist",
+        "Urban Planner",
+        "Environmental Analyst"
+      ]
+    },
+
+    "Philosophy": {
+      "careers": [
+        "Researcher",
+        "Teacher",
+        "Ethics Consultant",
+        "Academic Writer"
+      ]
+    },
+
+    "Media & Communication": {
+      "careers": [
+        "Journalist",
+        "Media Manager",
+        "Communication Specialist",
+        "Public Relations Officer",
+        "Content Creator"
+      ]
+    }
+
+  }
+}

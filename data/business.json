@@ -1,0 +1,107 @@
+{
+  "Business & Finance": {
+
+    "Bachelor of Business Administration (BBA)": {
+      "careers": [
+        "Business Manager",
+        "Operations Manager",
+        "Business Consultant",
+        "Project Manager",
+        "Business Development Executive"
+      ]
+    },
+
+    "Banking & Finance": {
+      "careers": [
+        "Bank Manager",
+        "Financial Analyst",
+        "Investment Banker",
+        "Credit Analyst",
+        "Risk Analyst"
+      ]
+    },
+
+    "Accounting & Finance": {
+      "careers": [
+        "Accountant",
+        "Auditor",
+        "Financial Controller",
+        "Tax Consultant",
+        "Finance Manager"
+      ]
+    },
+
+    "Business Information Technology": {
+      "careers": [
+        "Business Analyst",
+        "ERP Consultant",
+        "IT Business Consultant",
+        "Systems Analyst"
+      ]
+    },
+
+    "Marketing": {
+      "careers": [
+        "Marketing Manager",
+        "Digital Marketing Specialist",
+        "Brand Manager",
+        "SEO Specialist",
+        "Social Media Manager"
+      ]
+    },
+
+    "Human Resource Management": {
+      "careers": [
+        "HR Manager",
+        "Recruitment Specialist",
+        "Talent Acquisition Specialist",
+        "Training Manager"
+      ]
+    },
+
+    "Supply Chain Management": {
+      "careers": [
+        "Supply Chain Manager",
+        "Logistics Manager",
+        "Procurement Officer",
+        "Operations Manager"
+      ]
+    },
+
+    "Business Analytics": {
+      "careers": [
+        "Business Analyst",
+        "Data Analyst",
+        "Business Intelligence Analyst",
+        "Analytics Consultant"
+      ]
+    },
+
+    "Entrepreneurship": {
+      "careers": [
+        "Entrepreneur",
+        "Startup Founder",
+        "Business Consultant",
+        "Innovation Manager"
+      ]
+    },
+
+    "Economics": {
+      "careers": [
+        "Economist",
+        "Economic Analyst",
+        "Policy Analyst",
+        "Research Economist"
+      ]
+    },
+
+    "Islamic Banking & Finance": {
+      "careers": [
+        "Islamic Banking Officer",
+        "Shariah Compliance Officer",
+        "Financial Consultant"
+      ]
+    }
+
+  }
+}

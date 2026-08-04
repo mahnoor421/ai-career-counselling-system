@@ -1,0 +1,219 @@
+{
+  "Software Developer": {
+    "description": "Designs, develops, and maintains software applications and systems.",
+    "education": ["B.Tech Computer Science", "B.S. in Software Engineering", "Bootcamp Certification"],
+    "skills": ["Programming (Python, Java, C++)", "Web Development", "System Design", "Data Structures", "Algorithms"],
+    "interests": ["Programming", "Problem Solving", "Software Development", "Technology"],
+    "salary_range": "$80,000 - $180,000",
+    "roadmap": [
+      "Learn programming languages",
+      "Study data structures and algorithms",
+      "Learn software design patterns",
+      "Build projects and portfolio",
+      "Contribute to open-source",
+      "Learn web/mobile development",
+      "Get internship experience",
+      "Apply for software developer roles"
+    ],
+    "certifications": [
+      "B.Tech Computer Science",
+      "Oracle Java Programmer",
+      "AWS Certified Developer",
+      "Microsoft Azure Developer"
+    ],
+    "future_scope": "Software development remains in high demand with 25% growth projected. Remote work opportunities are abundant."
+  },
+  "Web Developer": {
+    "description": "Creates and maintains websites and web applications using front-end and back-end technologies.",
+    "education": ["B.Tech Computer Science", "Web Development Bootcamp", "Self-taught with portfolio"],
+    "skills": ["HTML/CSS", "JavaScript", "React/Vue/Angular", "Node.js", "SQL", "Responsive Design"],
+    "interests": ["Web Design", "User Experience", "Programming", "Creativity"],
+    "salary_range": "$70,000 - $150,000",
+    "roadmap": [
+      "Learn HTML, CSS, and JavaScript",
+      "Master responsive web design",
+      "Learn front-end frameworks (React, Vue, Angular)",
+      "Learn back-end development (Node.js, Python, PHP)",
+      "Study databases (SQL, MongoDB)",
+      "Build web projects",
+      "Learn version control (Git)",
+      "Deploy applications to production"
+    ],
+    "certifications": [
+      "Web Development Certificate",
+      "Google Cloud Associate Cloud Engineer",
+      "AWS Certified Cloud Practitioner",
+      "Responsive Web Design Certification"
+    ],
+    "future_scope": "Web development continues to grow with new frameworks. Freelance opportunities are excellent."
+  },
+  "Mobile App Developer": {
+    "description": "Designs and develops mobile applications for smartphones and tablets.",
+    "education": ["B.Tech Computer Science", "Mobile Development Bootcamp", "Self-taught"],
+    "skills": ["Swift/Kotlin", "Android/iOS Development", "React Native", "Firebase", "UI/UX"],
+    "interests": ["Mobile Apps", "Programming", "User Experience", "Technology"],
+    "salary_range": "$80,000 - $160,000",
+    "roadmap": [
+      "Learn a mobile platform (iOS or Android)",
+      "Master programming language for that platform",
+      "Learn mobile UI/UX design",
+      "Build mobile applications",
+      "Learn cross-platform development (React Native, Flutter)",
+      "Deploy apps to app stores",
+      "Build portfolio of apps",
+      "Apply for mobile developer positions"
+    ],
+    "certifications": [
+      "Android Developer Certification",
+      "iOS Developer Certificate",
+      "Flutter Certification",
+      "React Native Specialist"
+    ],
+    "future_scope": "Mobile app development is booming with increasing smartphone usage globally."
+  },
+  "Data Scientist": {
+    "description": "Analyzes complex datasets to help organizations make data-driven decisions.",
+    "education": ["B.Tech Computer Science", "M.S. in Data Science", "Data Science Bootcamp"],
+    "skills": ["Python", "SQL", "Machine Learning", "Data Analysis", "Statistics", "Tableau"],
+    "interests": ["Data Analysis", "Statistics", "Machine Learning", "Business Intelligence"],
+    "salary_range": "$100,000 - $180,000",
+    "roadmap": [
+      "Learn statistics and mathematics",
+      "Master Python and SQL",
+      "Study machine learning algorithms",
+      "Learn data visualization tools",
+      "Build data analysis projects",
+      "Get Data Science certifications",
+      "Build portfolio of projects",
+      "Apply for data scientist roles"
+    ],
+    "certifications": [
+      "Google Data Analytics Certificate",
+      "IBM Data Science Professional Certificate",
+      "AWS Machine Learning Specialty",
+      "Coursera Data Science Specialization"
+    ],
+    "future_scope": "Data Science has 36% job growth expected. Every company needs data-driven insights."
+  },
+  "AI/ML Engineer": {
+    "description": "Develops artificial intelligence and machine learning systems that solve complex problems.",
+    "education": ["B.Tech Computer Science", "M.S. in AI/ML", "Deep Learning Specialization"],
+    "skills": ["Python", "Machine Learning", "Deep Learning", "TensorFlow", "PyTorch", "NLP"],
+    "interests": ["Artificial Intelligence", "Machine Learning", "Data Science", "Research"],
+    "salary_range": "$120,000 - $220,000",
+    "roadmap": [
+      "Master Python programming",
+      "Learn ML algorithms",
+      "Study Deep Learning and Neural Networks",
+      "Learn TensorFlow and PyTorch",
+      "Build AI projects",
+      "Contribute to open-source AI",
+      "Get AI certifications",
+      "Apply for AI Engineer roles"
+    ],
+    "certifications": [
+      "Google Cloud AI Engineer",
+      "AWS Machine Learning Specialty",
+      "TensorFlow Developer Certificate",
+      "Deep Learning Specialization"
+    ],
+    "future_scope": "AI is fastest-growing with 35% expected growth. Excellent career prospects."
+  },
+  "Cyber Security Expert": {
+    "description": "Protects computer networks and systems from security breaches and cyber attacks.",
+    "education": ["B.Tech Cyber Security", "B.Tech Computer Science", "Security certifications"],
+    "skills": ["Network Security", "Cryptography", "Penetration Testing", "Security Tools", "Linux"],
+    "interests": ["Cybersecurity", "Problem Solving", "Technology", "Security"],
+    "salary_range": "$90,000 - $170,000",
+    "roadmap": [
+      "Learn networking fundamentals",
+      "Study operating systems",
+      "Learn programming and scripting",
+      "Study cryptography",
+      "Get Security+ certification",
+      "Get CEH (Certified Ethical Hacker)",
+      "Gain hands-on security experience",
+      "Apply for cybersecurity roles"
+    ],
+    "certifications": [
+      "CompTIA Security+",
+      "Certified Ethical Hacker (CEH)",
+      "CISSP",
+      "AWS Security Specialty"
+    ],
+    "future_scope": "Cybersecurity is critical with 33% job growth. Every organization needs security experts."
+  },
+  "Database Administrator": {
+    "description": "Manages, maintains, and secures databases for organizations.",
+    "education": ["B.Tech Information Technology", "Database Administration Certificate", "Bootcamp"],
+    "skills": ["SQL", "Database Design", "Performance Tuning", "Security", "Backup & Recovery"],
+    "interests": ["Databases", "Data Management", "System Administration", "Problem Solving"],
+    "salary_range": "$80,000 - $140,000",
+    "roadmap": [
+      "Learn SQL and database concepts",
+      "Master a database system (Oracle, MySQL, PostgreSQL)",
+      "Learn database design",
+      "Study performance tuning",
+      "Learn backup and recovery",
+      "Get database certifications",
+      "Gain DBA experience",
+      "Apply for DBA roles"
+    ],
+    "certifications": [
+      "Oracle Database Administrator",
+      "MySQL Database Administrator",
+      "Microsoft SQL Server Certification",
+      "AWS Certified Database Specialty"
+    ],
+    "future_scope": "DBAs are essential for data management with consistent demand in all sectors."
+  },
+  "System Administrator": {
+    "description": "Manages and maintains computer systems and networks for organizations.",
+    "education": ["B.Tech Information Technology", "System Administration Certificate", "CompTIA A+"],
+    "skills": ["Linux", "Windows Server", "Network Management", "Troubleshooting", "Security"],
+    "interests": ["System Administration", "Networking", "Problem Solving", "Technology"],
+    "salary_range": "$60,000 - $120,000",
+    "roadmap": [
+      "Learn networking fundamentals",
+      "Master Linux and Windows Server",
+      "Study network protocols",
+      "Learn system security",
+      "Get CompTIA certifications",
+      "Get Linux certifications (RHCE/LPIC)",
+      "Gain system administration experience",
+      "Apply for system admin roles"
+    ],
+    "certifications": [
+      "CompTIA A+",
+      "CompTIA Network+",
+      "Red Hat Certified Administrator (RHCA)",
+      "Microsoft Certified: Systems Administrator"
+    ],
+    "future_scope": "System administrators are essential for IT infrastructure management with steady demand."
+  },
+  "Cloud Engineer": {
+    "description": "Designs and manages cloud computing infrastructure and services.",
+    "education": ["B.Tech Computer Science", "Cloud Computing Certification", "Bootcamp"],
+    "skills": ["AWS/Azure/GCP", "Cloud Architecture", "Networking", "DevOps", "Containerization"],
+    "interests": ["Cloud Computing", "Infrastructure", "DevOps", "Scalability"],
+    "salary_range": "$90,000 - $180,000",
+    "roadmap": [
+      "Learn cloud computing concepts",
+      "Choose a cloud platform (AWS, Azure, GCP)",
+      "Learn cloud services and architecture",
+      "Master Docker and Kubernetes",
+      "Learn Infrastructure as Code",
+      "Get cloud certifications",
+      "Build cloud projects",
+      "Apply for cloud engineer roles"
+    ],
+    "certifications": [
+      "AWS Solutions Architect",
+      "Azure Administrator",
+      "Google Cloud Professional Architect",
+      "Kubernetes Certified Application Developer (CKAD)"
+    ],
+    "future_scope": "Cloud engineering is booming with businesses migrating to cloud infrastructure."
+  }
+}
+

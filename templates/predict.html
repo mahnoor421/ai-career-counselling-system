@@ -1,0 +1,372 @@
+{% extends "base.html" %}
+
+{% block title %}Career Prediction - AI Career Counselor{% endblock %}
+
+{% block extra_css %}
+<style>
+    .predict-container {
+        max-width: 900px;
+        margin: 50px auto;
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-title {
+        color: #0d6efd;
+        font-weight: 600;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #0dcaf0;
+    }
+
+    .interest-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+
+    .interest-card {
+        background: white;
+        border: 2px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 18px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+    }
+
+    .interest-card:hover {
+        border-color: #0d6efd;
+        box-shadow: 0 4px 15px rgba(13, 110, 253, 0.2);
+        transform: translateY(-2px);
+    }
+
+    .interest-card.selected {
+        background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+        color: white;
+        border-color: #0d6efd;
+        box-shadow: 0 6px 20px rgba(13, 110, 253, 0.3);
+    }
+
+    .interest-card i {
+        font-size: 2rem;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-label {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        border: 2px solid #e0e0e0;
+        padding: 12px 15px;
+        transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    }
+
+    .education-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .edu-option {
+        padding: 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+
+    .edu-option:hover {
+        border-color: #0d6efd;
+        background: #f0f7ff;
+    }
+
+    .edu-option.selected {
+        background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+        color: white;
+        border-color: #0d6efd;
+    }
+
+    .btn-predict {
+        background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+        border: none;
+        padding: 15px 40px;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+    }
+
+    .btn-predict:hover {
+        box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+        transform: translateY(-2px);
+    }
+
+    .btn-predict:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    .selected-items {
+        background: #f0f7ff;
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 15px;
+        border-left: 4px solid #0d6efd;
+    }
+
+    .selected-items p {
+        margin: 5px 0;
+        color: #333;
+    }
+
+    .selected-items strong {
+        color: #0d6efd;
+    }
+
+    @media (max-width: 768px) {
+        .predict-container {
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .interest-grid {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="predict-container">
+        <h2 class="text-center mb-5">
+            <i class="bi bi-target"></i> Discover Your Perfect Career
+        </h2>
+
+        <form id="predictForm" method="POST" action="/predict">
+            <!-- Education Level -->
+            <div class="form-group">
+                <label class="form-label">
+                    <i class="bi bi-mortarboard"></i> What is Your Education Level?
+                </label>
+                
+                <div class="education-options">
+                    <div class="edu-option" data-value="Matric">
+                        <strong>Matric</strong><br>
+                        <small>High School</small>
+                    </div>
+                    <div class="edu-option" data-value="ICS">
+                        <strong>ICS</strong><br>
+                        <small>Pre-Engineering</small>
+                    </div>
+                    <div class="edu-option" data-value="FSc Pre-Engineering">
+                        <strong>FSc</strong><br>
+                        <small>Pre-Engineering</small>
+                    </div>
+                    <div class="edu-option" data-value="FSc Pre-Medical">
+                        <strong>FSc</strong><br>
+                        <small>Pre-Medical</small>
+                    </div>
+                    <div class="edu-option" data-value="I.Com">
+                        <strong>I.Com</strong><br>
+                        <small>Commerce</small>
+                    </div>
+                    <div class="edu-option" data-value="FA">
+                        <strong>FA</strong><br>
+                        <small>Arts</small>
+                    </div>
+                    <div class="edu-option" data-value="BSCS">
+                        <strong>BSCS</strong><br>
+                        <small>Computer Science</small>
+                    </div>
+                    <div class="edu-option" data-value="BBA">
+                        <strong>BBA</strong><br>
+                        <small>Business Admin</small>
+                    </div>
+                    <div class="edu-option" data-value="MBBS">
+                        <strong>MBBS</strong><br>
+                        <small>Medicine</small>
+                    </div>
+                    <div class="edu-option" data-value="Other">
+                        <strong>Other</strong><br>
+                        <small>Different Degree</small>
+                    </div>
+                </div>
+                <input type="hidden" id="education" name="education" required>
+            </div>
+
+            <!-- Career Interests -->
+            <div class="form-group">
+                <label class="form-label">
+                    <i class="bi bi-heart"></i> Select Your Career Interests (Click to select multiple)
+                </label>
+                
+                <div class="interest-grid">
+                    <div class="interest-card" data-interest="Artificial Intelligence">
+                        <i class="bi bi-robot"></i>
+                        <strong>AI & ML</strong>
+                    </div>
+                    <div class="interest-card" data-interest="Healthcare">
+                        <i class="bi bi-heart-pulse"></i>
+                        <strong>Healthcare</strong>
+                    </div>
+                    <div class="interest-card" data-interest="Engineering">
+                        <i class="bi bi-gear"></i>
+                        <strong>Engineering</strong>
+                    </div>
+                    <div class="interest-card" data-interest="Business">
+                        <i class="bi bi-briefcase"></i>
+                        <strong>Business</strong>
+                    </div>
+                    <div class="interest-card" data-interest="Design">
+                        <i class="bi bi-palette"></i>
+                        <strong>Design</strong>
+                    </div>
+                    <div class="interest-card" data-interest="Science">
+                        <i class="bi bi-flask"></i>
+                        <strong>Science</strong>
+                    </div>
+                    <div class="interest-card" data-interest="Law">
+                        <i class="bi bi-scale"></i>
+                        <strong>Law</strong>
+                    </div>
+                    <div class="interest-card" data-interest="Education">
+                        <i class="bi bi-book"></i>
+                        <strong>Education</strong>
+                    </div>
+                    <div class="interest-card" data-interest="Media">
+                        <i class="bi bi-camera-video"></i>
+                        <strong>Media</strong>
+                    </div>
+                    <div class="interest-card" data-interest="Finance">
+                        <i class="bi bi-graph-up"></i>
+                        <strong>Finance</strong>
+                    </div>
+                    <div class="interest-card" data-interest="Programming">
+                        <i class="bi bi-code-slash"></i>
+                        <strong>Programming</strong>
+                    </div>
+                    <div class="interest-card" data-interest="Writing">
+                        <i class="bi bi-pencil"></i>
+                        <strong>Writing</strong>
+                    </div>
+                    <div class="interest-card" data-interest="Research">
+                        <i class="bi bi-microscope"></i>
+                        <strong>Research</strong>
+                    </div>
+                    <div class="interest-card" data-interest="Management">
+                        <i class="bi bi-person-badge"></i>
+                        <strong>Management</strong>
+                    </div>
+                    <div class="interest-card" data-interest="Technology">
+                        <i class="bi bi-laptop"></i>
+                        <strong>Technology</strong>
+                    </div>
+                </div>
+                <input type="hidden" id="interests" name="interests" required>
+                <div class="selected-items" id="selectedInterests" style="display: none;">
+                    <p><strong>Selected:</strong> <span id="interestsList"></span></p>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="form-group">
+                <label class="form-label" for="skills">
+                    <i class="bi bi-lightning-fill"></i> Your Current Skills
+                </label>
+                <textarea 
+                    class="form-control" 
+                    id="skills" 
+                    name="skills" 
+                    rows="3" 
+                    placeholder="Example: Python, Communication, Leadership, Data Analysis, Creativity..."
+                    required></textarea>
+                <small class="text-muted d-block mt-2">Separate skills with commas</small>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-predict">
+                <i class="bi bi-lightning"></i> Get Career Recommendations
+            </button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Education Selection
+document.querySelectorAll('.edu-option').forEach(option => {
+    option.addEventListener('click', function() {
+        document.querySelectorAll('.edu-option').forEach(o => o.classList.remove('selected'));
+        this.classList.add('selected');
+        document.getElementById('education').value = this.dataset.value;
+    });
+});
+
+// Interest Selection
+document.querySelectorAll('.interest-card').forEach(card => {
+    card.addEventListener('click', function() {
+        this.classList.toggle('selected');
+        updateInterests();
+    });
+});
+
+function updateInterests() {
+    const selected = document.querySelectorAll('.interest-card.selected');
+    const interests = Array.from(selected).map(card => card.dataset.interest);
+    
+    const interestsInput = document.getElementById('interests');
+    const selectedDiv = document.getElementById('selectedInterests');
+    const interestsList = document.getElementById('interestsList');
+    
+    if (interests.length > 0) {
+        interestsInput.value = interests.join(', ');
+        interestsList.textContent = interests.join(', ');
+        selectedDiv.style.display = 'block';
+    } else {
+        interestsInput.value = '';
+        selectedDiv.style.display = 'none';
+    }
+}
+
+// Form Validation
+document.getElementById('predictForm').addEventListener('submit', function(e) {
+    const education = document.getElementById('education').value;
+    const interests = document.getElementById('interests').value;
+    const skills = document.getElementById('skills').value.trim();
+    
+    if (!education || !interests || !skills) {
+        e.preventDefault();
+        alert('Please fill all fields:\n- Select Education\n- Select at least one Interest\n- Enter your Skills');
+    }
+});
+</script>
+{% endblock %}

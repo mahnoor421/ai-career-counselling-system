@@ -1,0 +1,700 @@
+{% extends "base.html" %}
+
+{% block title %}My Dashboard - AI Career Counselor{% endblock %}
+
+{% block extra_css %}
+<style>
+    .dashboard-header {
+        background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+        color: white;
+        padding: 50px 30px;
+        border-radius: 15px;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .dashboard-header h2 {
+        font-size: 2.2rem;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+
+    .dashboard-header p {
+        font-size: 1.1rem;
+        opacity: 0.95;
+        margin: 0;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .stat-card {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        transition: all 0.3s ease;
+        border-top: 4px solid #0dcaf0;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .stat-card i {
+        font-size: 2.5rem;
+        color: #0d6efd;
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #0d6efd;
+        margin-bottom: 8px;
+    }
+
+    .stat-label {
+        color: #666;
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        color: #0d6efd;
+        font-weight: 700;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #0dcaf0;
+    }
+
+    .chart-container {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        margin-bottom: 40px;
+    }
+
+    .chart-container canvas {
+        max-height: 350px;
+    }
+
+    .history-section {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        margin-bottom: 40px;
+        overflow-x: auto;
+    }
+
+    .history-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .history-table thead {
+        background: #f8f9fa;
+    }
+
+    .history-table th {
+        padding: 16px;
+        text-align: left;
+        font-weight: 700;
+        color: #0d6efd;
+        border-bottom: 2px solid #e0e0e0;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .history-table td {
+        padding: 16px;
+        border-bottom: 1px solid #e0e0e0;
+        color: #333;
+    }
+
+    .history-table tbody tr:hover {
+        background: #f0f7ff;
+    }
+
+    .career-badge {
+        background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: inline-block;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .score-badge {
+        background: linear-gradient(135deg, #198754, #20c997);
+        color: white;
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-weight: 700;
+        display: inline-block;
+        min-width: 60px;
+        text-align: center;
+    }
+
+    .score-badge.low {
+        background: linear-gradient(135deg, #ffc107, #ff9800);
+    }
+
+    .score-badge.high {
+        background: linear-gradient(135deg, #28a745, #20c997);
+    }
+
+    .date-badge {
+        color: #999;
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+
+    .action-btn {
+        background: #0d6efd;
+        color: white;
+        padding: 6px 14px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 0.85rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .action-btn:hover {
+        background: #0b5ed7;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 80px 40px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        margin-bottom: 40px;
+    }
+
+    .empty-state i {
+        font-size: 4rem;
+        color: #ddd;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .empty-state h3 {
+        color: #999;
+        margin-bottom: 10px;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    .empty-state p {
+        color: #bbb;
+        margin-bottom: 30px;
+        font-size: 1.05rem;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+
+    .btn-action {
+        padding: 14px 30px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        font-size: 0.95rem;
+    }
+
+    .btn-action.primary {
+        background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+        color: white;
+    }
+
+    .btn-action.primary:hover {
+        box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+        transform: translateY(-2px);
+    }
+
+    .btn-action.secondary {
+        background: white;
+        color: #0d6efd;
+        border: 2px solid #0d6efd;
+    }
+
+    .btn-action.secondary:hover {
+        background: #f0f7ff;
+        transform: translateY(-2px);
+    }
+
+    .pagination-info {
+        background: #e7f1ff;
+        padding: 12px;
+        border-radius: 8px;
+        color: #0d6efd;
+        font-weight: 600;
+        margin-bottom: 15px;
+        border-left: 4px solid #0d6efd;
+        font-size: 0.9rem;
+    }
+
+    .chart-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #0d6efd;
+        margin-bottom: 20px;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .dashboard-header {
+            padding: 30px 20px;
+        }
+
+        .dashboard-header h2 {
+            font-size: 1.8rem;
+        }
+
+        .stats-grid {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .stat-card {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+        }
+
+        .history-table th,
+        .history-table td {
+            padding: 12px 8px;
+            font-size: 0.85rem;
+        }
+
+        .career-badge {
+            max-width: 120px;
+            font-size: 0.8rem;
+            padding: 6px 12px;
+        }
+
+        .action-btn {
+            padding: 5px 10px;
+            font-size: 0.8rem;
+        }
+
+        .action-buttons {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn-action {
+            width: 100%;
+            justify-content: center;
+            padding: 12px 20px;
+        }
+
+        .empty-state {
+            padding: 40px 20px;
+        }
+
+        .empty-state i {
+            font-size: 2.5rem;
+        }
+
+        .empty-state h3 {
+            font-size: 1.4rem;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .stats-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .history-table th,
+        .history-table td {
+            padding: 10px 6px;
+            font-size: 0.75rem;
+        }
+
+        .career-badge {
+            max-width: 100px;
+            font-size: 0.75rem;
+        }
+
+        .date-badge {
+            font-size: 0.8rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    
+    <!-- Dashboard Header -->
+    <div class="dashboard-header">
+        <h2>
+            <i class="bi bi-speedometer2"></i> Welcome, {{ current_user.name }}!
+        </h2>
+        <p>Your Career Exploration Dashboard</p>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <i class="bi bi-target"></i>
+            <div class="stat-number">{{ total_predictions }}</div>
+            <div class="stat-label">Total Predictions</div>
+        </div>
+
+        <div class="stat-card">
+            <i class="bi bi-bookmark"></i>
+            <div class="stat-number">{{ unique_careers }}</div>
+            <div class="stat-label">Unique Careers</div>
+        </div>
+
+        <div class="stat-card">
+            <i class="bi bi-star"></i>
+            <div class="stat-number">{{ average_score }}%</div>
+            <div class="stat-label">Average Match Score</div>
+        </div>
+
+        <div class="stat-card">
+            <i class="bi bi-lightning"></i>
+            <div class="stat-number" style="font-size: 1.3rem; overflow: hidden; text-overflow: ellipsis;">
+                {% if latest_career != "No predictions yet" %}
+                    {{ latest_career[:20] }}{% if latest_career|length > 20 %}...{% endif %}
+                {% else %}
+                    N/A
+                {% endif %}
+            </div>
+            <div class="stat-label">Latest Career Match</div>
+        </div>
+    </div>
+
+    <!-- Chart Section -->
+    {% if chart_labels and chart_labels|length > 0 %}
+    <div class="chart-container">
+        <h3 class="chart-title">
+            <i class="bi bi-graph-up"></i> Your Top Career Matches
+        </h3>
+        <!-- Data attached securely via data- attributes -->
+        <canvas id="careerChart" 
+                data-labels='{{ chart_labels | tojson }}' 
+                data-values='{{ chart_values | tojson }}'></canvas>
+    </div>
+    {% endif %}
+
+    <!-- Prediction History Section -->
+    <div>
+        <h3 class="section-title">
+            <i class="bi bi-clock-history"></i> Your Prediction History
+        </h3>
+
+        {% if history %}
+        <div class="history-section">
+            {% if total_predictions > 10 %}
+            <div class="pagination-info">
+                <i class="bi bi-info-circle"></i> 
+                Showing most recent 50 predictions. Total: {{ total_predictions }}
+            </div>
+            {% endif %}
+
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">
+                            <i class="bi bi-bookmark"></i> Career
+                        </th>
+                        <th style="width: 15%;">
+                            <i class="bi bi-mortarboard"></i> Education
+                        </th>
+                        <th style="width: 10%;">
+                            <i class="bi bi-star"></i> Score
+                        </th>
+                        <th style="width: 25%;">
+                            <i class="bi bi-lightning-fill"></i> Skills
+                        </th>
+                        <th style="width: 15%;">
+                            <i class="bi bi-calendar"></i> Date
+                        </th>
+                        <th style="width: 10%; text-align: center;">
+                            <i class="bi bi-gear"></i> Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in history[:50] %}
+                    <tr>
+                        <td>
+                            <span class="career-badge" title="{{ item.career }}">
+                                {{ item.career }}
+                            </span>
+                        </td>
+                        <td>
+                            <span style="color: #666; font-weight: 500;">
+                                {% if item.education %}{{ item.education }}{% else %}N/A{% endif %}
+                            </span>
+                        </td>
+                        <td>
+                            {% if item.match_score >= 75 %}
+                                <span class="score-badge high">{{ item.match_score }}%</span>
+                            {% elif item.match_score >= 50 %}
+                                <span class="score-badge">{{ item.match_score }}%</span>
+                            {% else %}
+                                <span class="score-badge low">{{ item.match_score }}%</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <span style="color: #666; font-size: 0.9rem;">
+                                {% if item.skills and item.skills|length > 40 %}
+                                    {{ item.skills[:40] }}...
+                                {% elif item.skills %}
+                                    {{ item.skills }}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                            </span>
+                        </td>
+                        <td>
+                            <span class="date-badge">
+                                {{ item.created_at.strftime("%b %d, %Y") }}
+                            </span>
+                        </td>
+                        <td style="text-align: center;">
+                            <a href="/career/{{ item.career | urlencode }}" class="action-btn" title="View full details">
+                                <i class="bi bi-eye"></i> View
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        {% else %}
+        <div class="empty-state">
+            <i class="bi bi-inbox"></i>
+            <h3>No Predictions Yet</h3>
+            <p>Start exploring careers to see your prediction history and track your journey.</p>
+            
+            <div class="action-buttons">
+                <a href="/predict" class="btn-action primary">
+                    <i class="bi bi-lightning"></i> Get Career Predictions
+                </a>
+                <a href="/careers" class="btn-action secondary">
+                    <i class="bi bi-search"></i> Browse Careers
+                </a>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    {% if history %}
+    <div class="action-buttons" style="margin-top: 50px;">
+        <a href="/predict" class="btn-action primary">
+            <i class="bi bi-lightning"></i> New Prediction
+        </a>
+        <a href="/chatbot" class="btn-action secondary">
+            <i class="bi bi-chat-left-dots"></i> Chat with AI
+        </a>
+        <a href="/careers" class="btn-action secondary">
+            <i class="bi bi-search"></i> Explore More Careers
+        </a>
+    </div>
+    {% endif %}
+
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    initializeChart();
+    animateStats();
+});
+
+function initializeChart() {
+    var canvasElement = document.getElementById("careerChart");
+    if (!canvasElement) {
+        return;
+    }
+
+    var labels = [];
+    var values = [];
+
+    try {
+        labels = JSON.parse(canvasElement.getAttribute("data-labels") || "[]");
+        values = JSON.parse(canvasElement.getAttribute("data-values") || "[]");
+    } catch (e) {
+        console.error("Error parsing chart data:", e);
+        return;
+    }
+    
+    if (!labels || !Array.isArray(labels) || labels.length === 0) {
+        return;
+    }
+    
+    var topLabels = labels.slice(0, 8);
+    var topValues = values.slice(0, 8);
+    
+    var bgColors = [
+        "rgba(13, 110, 253, 0.7)",
+        "rgba(0, 212, 240, 0.7)",
+        "rgba(108, 117, 125, 0.7)",
+        "rgba(40, 167, 69, 0.7)",
+        "rgba(255, 193, 7, 0.7)",
+        "rgba(220, 53, 69, 0.7)",
+        "rgba(23, 162, 184, 0.7)",
+        "rgba(111, 66, 193, 0.7)"
+    ];
+    
+    var borderColors = [
+        "rgba(13, 110, 253, 1)",
+        "rgba(0, 212, 240, 1)",
+        "rgba(108, 117, 125, 1)",
+        "rgba(40, 167, 69, 1)",
+        "rgba(255, 193, 7, 1)",
+        "rgba(220, 53, 69, 1)",
+        "rgba(23, 162, 184, 1)",
+        "rgba(111, 66, 193, 1)"
+    ];
+    
+    var hoverColors = [
+        "rgba(13, 110, 253, 0.9)",
+        "rgba(0, 212, 240, 0.9)",
+        "rgba(108, 117, 125, 0.9)",
+        "rgba(40, 167, 69, 0.9)",
+        "rgba(255, 193, 7, 0.9)",
+        "rgba(220, 53, 69, 0.9)",
+        "rgba(23, 162, 184, 0.9)",
+        "rgba(111, 66, 193, 0.9)"
+    ];
+    
+    var ctx = canvasElement.getContext("2d");
+    new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: topLabels,
+            datasets: [{
+                label: "Number of Predictions",
+                data: topValues,
+                backgroundColor: bgColors,
+                borderColor: borderColors,
+                borderWidth: 2,
+                borderRadius: 8,
+                hoverBackgroundColor: hoverColors,
+                hoverBorderWidth: 3
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            indexAxis: topLabels.length > 5 ? "y" : "x",
+            plugins: {
+                legend: {
+                    display: true,
+                    position: "top",
+                    labels: {
+                        color: "#333",
+                        padding: 15,
+                        usePointStyle: true
+                    }
+                },
+                tooltip: {
+                    backgroundColor: "rgba(0, 0, 0, 0.8)",
+                    padding: 12,
+                    borderColor: "#0dcaf0",
+                    borderWidth: 1
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        color: "#666"
+                    },
+                    grid: {
+                        color: "rgba(0, 0, 0, 0.05)",
+                        drawBorder: false
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: "#666"
+                    },
+                    grid: {
+                        display: false,
+                        drawBorder: false
+                    }
+                }
+            }
+        }
+    });
+}
+
+function animateStats() {
+    var cards = document.querySelectorAll(".stat-card");
+    cards.forEach(function(card, index) {
+        var delay = (index * 0.1) + "s";
+        card.style.animation = "fadeInUp 0.5s ease " + delay + " both";
+    });
+}
+</script>
+{% endblock %}

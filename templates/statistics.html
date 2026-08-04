@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Career Statistics
+</title>
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+
+<body>
+
+
+<div class="stats-container">
+
+
+<div class="stats-header">
+
+<h1>
+📊 AI Career System Analytics
+</h1>
+
+<p>
+Overview of users, recommendations and career trends
+</p>
+
+</div>
+
+
+
+<div class="stats-grid">
+
+
+<div class="stat-card blue">
+
+
+<div class="icon">
+👥
+</div>
+
+
+<div>
+
+<h3>
+Total Users
+</h3>
+
+
+<h2>
+{{ total_users }}
+</h2>
+
+
+<span>
+Registered Users
+</span>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="stat-card green">
+
+
+<div class="icon">
+🎯
+</div>
+
+
+<div>
+
+<h3>
+Total Recommendations
+</h3>
+
+
+<h2>
+{{ total_predictions }}
+</h2>
+
+
+<span>
+Career Suggestions Generated
+</span>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="career-section">
+
+
+<h2>
+🔥 Most Recommended Careers
+</h2>
+
+
+
+<div class="career-list">
+
+
+{% for career, count in careers %}
+
+
+<div class="career-card">
+
+
+<div class="career-icon">
+🚀
+</div>
+
+
+<div>
+
+<h3>
+{{ career }}
+</h3>
+
+
+<p>
+{{ count }} Recommendations
+</p>
+
+
+</div>
+
+
+</div>
+
+
+{% endfor %}
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+</body>
+
+</html>

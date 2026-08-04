@@ -1,0 +1,100 @@
+{
+  "Arts, Design & Creative Fields": {
+
+    "Fine Arts": {
+      "careers": [
+        "Artist",
+        "Painter",
+        "Art Teacher",
+        "Gallery Curator",
+        "Creative Director"
+      ]
+    },
+
+    "Graphic Design": {
+      "careers": [
+        "Graphic Designer",
+        "Visual Designer",
+        "Brand Designer",
+        "Creative Designer",
+        "UI Designer"
+      ]
+    },
+
+    "Fashion Design": {
+      "careers": [
+        "Fashion Designer",
+        "Fashion Consultant",
+        "Textile Designer",
+        "Fashion Illustrator"
+      ]
+    },
+
+    "Interior Design": {
+      "careers": [
+        "Interior Designer",
+        "Space Planner",
+        "Design Consultant",
+        "Interior Decorator"
+      ]
+    },
+
+    "Architecture": {
+      "careers": [
+        "Architect",
+        "Architectural Designer",
+        "Urban Planner",
+        "Construction Consultant"
+      ]
+    },
+
+    "Film & Television": {
+      "careers": [
+        "Film Director",
+        "Producer",
+        "Screenwriter",
+        "Cinematographer",
+        "Video Editor"
+      ]
+    },
+
+    "Animation & Multimedia": {
+      "careers": [
+        "Animator",
+        "3D Artist",
+        "Motion Graphics Designer",
+        "Visual Effects Artist"
+      ]
+    },
+
+    "Music": {
+      "careers": [
+        "Musician",
+        "Music Producer",
+        "Composer",
+        "Sound Designer",
+        "Music Teacher"
+      ]
+    },
+
+    "Photography": {
+      "careers": [
+        "Photographer",
+        "Photo Editor",
+        "Visual Content Creator",
+        "Media Specialist"
+      ]
+    },
+
+    "Creative Writing": {
+      "careers": [
+        "Writer",
+        "Author",
+        "Content Writer",
+        "Script Writer",
+        "Editor"
+      ]
+    }
+
+  }
+}

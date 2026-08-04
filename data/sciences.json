@@ -1,0 +1,115 @@
+{
+  "Natural Sciences": {
+
+    "Biology": {
+      "careers": [
+        "Biologist",
+        "Research Scientist",
+        "Biotechnology Specialist",
+        "Laboratory Scientist",
+        "Environmental Researcher"
+      ]
+    },
+
+    "Biotechnology": {
+      "careers": [
+        "Biotechnologist",
+        "Genetic Engineer",
+        "Biomedical Researcher",
+        "Biotech Scientist",
+        "Clinical Research Associate"
+      ]
+    },
+
+    "Microbiology": {
+      "careers": [
+        "Microbiologist",
+        "Laboratory Scientist",
+        "Clinical Microbiologist",
+        "Research Scientist"
+      ]
+    },
+
+    "Chemistry": {
+      "careers": [
+        "Chemist",
+        "Chemical Researcher",
+        "Laboratory Analyst",
+        "Quality Control Scientist"
+      ]
+    },
+
+    "Physics": {
+      "careers": [
+        "Physicist",
+        "Research Scientist",
+        "Physics Teacher",
+        "Data Analyst"
+      ]
+    },
+
+    "Mathematics": {
+      "careers": [
+        "Mathematician",
+        "Mathematical Analyst",
+        "Researcher",
+        "Statistician"
+      ]
+    },
+
+    "Statistics": {
+      "careers": [
+        "Statistician",
+        "Data Analyst",
+        "Data Scientist",
+        "Research Analyst"
+      ]
+    },
+
+    "Environmental Science": {
+      "careers": [
+        "Environmental Scientist",
+        "Climate Analyst",
+        "Sustainability Specialist",
+        "Environmental Consultant"
+      ]
+    },
+
+    "Geology": {
+      "careers": [
+        "Geologist",
+        "Earth Scientist",
+        "Mining Geologist",
+        "Environmental Geologist"
+      ]
+    },
+
+    "Astronomy": {
+      "careers": [
+        "Astronomer",
+        "Space Research Scientist",
+        "Astrophysicist",
+        "Research Scientist"
+      ]
+    },
+
+    "Forensic Science": {
+      "careers": [
+        "Forensic Scientist",
+        "Crime Laboratory Analyst",
+        "DNA Analyst",
+        "Forensic Investigator"
+      ]
+    },
+
+    "Food Science & Technology": {
+      "careers": [
+        "Food Scientist",
+        "Food Technologist",
+        "Food Safety Specialist",
+        "Quality Assurance Officer"
+      ]
+    }
+
+  }
+}

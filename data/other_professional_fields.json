@@ -1,0 +1,111 @@
+{
+  "Other Professional Fields": {
+
+    "Agriculture": {
+      "careers": [
+        "Agricultural Scientist",
+        "Agronomist",
+        "Farm Manager",
+        "Agriculture Officer",
+        "Agricultural Consultant"
+      ]
+    },
+
+    "Veterinary Medicine": {
+      "careers": [
+        "Veterinarian",
+        "Animal Health Specialist",
+        "Veterinary Surgeon",
+        "Animal Researcher"
+      ]
+    },
+
+    "Food Science": {
+      "careers": [
+        "Food Scientist",
+        "Food Technologist",
+        "Food Safety Specialist",
+        "Quality Control Officer"
+      ]
+    },
+
+    "Aviation Management": {
+      "careers": [
+        "Airport Manager",
+        "Aviation Officer",
+        "Flight Operations Manager",
+        "Airline Manager"
+      ]
+    },
+
+    "Aeronautical Engineering": {
+      "careers": [
+        "Aerospace Engineer",
+        "Aircraft Engineer",
+        "Flight Systems Engineer"
+      ]
+    },
+
+    "Hospitality Management": {
+      "careers": [
+        "Hotel Manager",
+        "Hospitality Manager",
+        "Event Manager",
+        "Tourism Consultant"
+      ]
+    },
+
+    "Tourism Management": {
+      "careers": [
+        "Tourism Manager",
+        "Travel Consultant",
+        "Tour Guide",
+        "Destination Manager"
+      ]
+    },
+
+    "Sports Sciences": {
+      "careers": [
+        "Sports Scientist",
+        "Fitness Trainer",
+        "Sports Coach",
+        "Athletic Trainer"
+      ]
+    },
+
+    "Maritime Studies": {
+      "careers": [
+        "Marine Officer",
+        "Ship Manager",
+        "Marine Engineer",
+        "Port Operations Manager"
+      ]
+    },
+
+    "Environmental Studies": {
+      "careers": [
+        "Environmental Scientist",
+        "Climate Analyst",
+        "Sustainability Consultant",
+        "Conservation Specialist"
+      ]
+    },
+
+    "Renewable Energy": {
+      "careers": [
+        "Renewable Energy Engineer",
+        "Solar Energy Specialist",
+        "Energy Consultant"
+      ]
+    },
+
+    "Blockchain & FinTech": {
+      "careers": [
+        "Blockchain Developer",
+        "FinTech Analyst",
+        "Digital Banking Specialist"
+      ]
+    }
+
+  }
+}

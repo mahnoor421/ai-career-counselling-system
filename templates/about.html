@@ -1,0 +1,290 @@
+{% extends "base.html" %}
+
+{% block title %}About - AI Career Counselor{% endblock %}
+
+{% block extra_css %}
+<style>
+    .about-hero {
+        background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .about-hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .about-container {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 0 20px;
+    }
+
+    .about-section {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .about-section h2 {
+        color: #0d6efd;
+        font-weight: 700;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+    }
+
+    .about-section p {
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 15px;
+        font-size: 1.05rem;
+    }
+
+    .feature-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .feature-item {
+        background: #f0f7ff;
+        padding: 25px;
+        border-radius: 10px;
+        border-left: 4px solid #0d6efd;
+        text-align: center;
+    }
+
+    .feature-item i {
+        font-size: 2.5rem;
+        color: #0dcaf0;
+        margin-bottom: 15px;
+    }
+
+    .feature-item h4 {
+        color: #0d6efd;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .feature-item p {
+        color: #666;
+        font-size: 0.95rem;
+        margin: 0;
+    }
+
+    .team-section {
+        background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+        color: white;
+        padding: 50px 40px;
+        border-radius: 12px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .team-section h2 {
+        color: white;
+        margin-bottom: 30px;
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .team-member {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 25px;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+    }
+
+    .team-member h4 {
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+
+    .team-member p {
+        font-size: 0.9rem;
+        opacity: 0.9;
+        margin: 0;
+    }
+
+    .cta-box {
+        background: #e7f1ff;
+        padding: 40px;
+        border-radius: 12px;
+        text-align: center;
+        border-left: 4px solid #0d6efd;
+    }
+
+    .cta-box h3 {
+        color: #0d6efd;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+
+    .cta-box p {
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+    }
+
+    .btn-cta {
+        background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    .btn-cta:hover {
+        box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+        transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+        .about-hero h1 {
+            font-size: 1.8rem;
+        }
+
+        .about-section {
+            padding: 20px;
+        }
+
+        .team-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<div class="about-hero">
+    <h1><i class="bi bi-info-circle"></i> About AI Career Counselor</h1>
+    <p>Empowering students and professionals to discover their perfect career path</p>
+</div>
+
+<div class="about-container">
+    <!-- Mission Section -->
+    <section class="about-section">
+        <h2><i class="bi bi-target"></i> Our Mission</h2>
+        <p>
+            AI Career Counselor is dedicated to revolutionizing career guidance by combining artificial intelligence 
+            with comprehensive career data. We believe that everyone deserves access to personalized career counseling 
+            to make informed decisions about their future.
+        </p>
+        <p>
+            Our platform analyzes your education, skills, and interests to provide intelligent career recommendations, 
+            helping you discover opportunities you might not have considered.
+        </p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="about-section">
+        <h2><i class="bi bi-star"></i> Why Choose Us?</h2>
+        
+        <div class="feature-list">
+            <div class="feature-item">
+                <i class="bi bi-robot"></i>
+                <h4>AI-Powered</h4>
+                <p>Advanced algorithms analyze your profile for accurate recommendations</p>
+            </div>
+
+            <div class="feature-item">
+                <i class="bi bi-database"></i>
+                <h4>300+ Careers</h4>
+                <p>Explore opportunities across diverse fields and industries</p>
+            </div>
+
+            <div class="feature-item">
+                <i class="bi bi-chat-left-dots"></i>
+                <h4>Interactive Chat</h4>
+                <p>Get personalized guidance from our AI assistant</p>
+            </div>
+
+            <div class="feature-item">
+                <i class="bi bi-graph-up"></i>
+                <h4>Career Roadmaps</h4>
+                <p>Step-by-step guidance to achieve your career goals</p>
+            </div>
+
+            <div class="feature-item">
+                <i class="bi bi-lock-fill"></i>
+                <h4>100% Free</h4>
+                <p>Access all features without any subscription required</p>
+            </div>
+
+            <div class="feature-item">
+                <i class="bi bi-people"></i>
+                <h4>User-Friendly</h4>
+                <p>Simple, intuitive interface for easy navigation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <div class="team-section">
+        <h2><i class="bi bi-people-fill"></i> About the Creator</h2>
+        
+        <div class="team-grid">
+            <div class="team-member">
+                <h4><i class="bi bi-person-circle"></i> Mahnoor Khan</h4>
+                <p>Founder & Developer</p>
+                <p style="margin-top: 10px; font-size: 0.85rem; opacity: 0.8;">
+                    Passionate about technology and helping students make better career choices.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works -->
+    <section class="about-section">
+        <h2><i class="bi bi-gear"></i> How It Works</h2>
+        
+        <div style="background: #f0f7ff; padding: 30px; border-radius: 10px; margin-top: 20px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div style="text-align: center;">
+                    <div style="background: #0d6efd; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 15px; font-weight: 700;">1</div>
+                    <h5 style="color: #0d6efd; margin-bottom: 10px;">Share Your Profile</h5>
+                    <p style="color: #666;">Tell us your education, skills, and interests</p>
+                </div>
+
+                <div style="text-align: center;">
+                    <div style="background: #0dcaf0; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 15px; font-weight: 700;">2</div>
+                    <h5 style="color: #0d6efd; margin-bottom: 10px;">AI Analysis</h5>
+                    <p style="color: #666;">Our AI analyzes and matches careers</p>
+                </div>
+
+                <div style="text-align: center;">
+                    <div style="background: #0d6efd; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 15px; font-weight: 700;">3</div>
+                    <h5 style="color: #0d6efd; margin-bottom: 10px;">Explore Results</h5>
+                    <p style="color: #666;">Get recommendations with detailed info</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <div class="cta-box">
+        <h3><i class="bi bi-rocket"></i> Ready to Find Your Dream Career?</h3>
+        <p>Start your career exploration journey today!</p>
+        <a href="/predict" class="btn-cta">
+            <i class="bi bi-lightning"></i> Get Started Now
+        </a>
+    </div>
+</div>
+
+{% endblock %}

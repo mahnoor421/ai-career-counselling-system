@@ -1,0 +1,184 @@
+{
+  "Doctor (MBBS)": {
+    "description": "Diagnoses and treats diseases, maintains patient health and provides medical care.",
+    "education": ["MBBS (Bachelor of Medicine)", "Medical Residency", "Board Certification"],
+    "skills": ["Medical Knowledge", "Patient Care", "Diagnosis", "Treatment Planning", "Communication", "Critical Thinking"],
+    "interests": ["Healthcare", "Biology", "Helping People", "Medical Science"],
+    "salary_range": "$150,000 - $300,000+",
+    "roadmap": [
+      "Complete pre-medical science courses",
+      "Take MCAT/NEET examination",
+      "Attend medical school (4-5 years)",
+      "Complete residency (3-7 years depending on specialty)",
+      "Get board certification",
+      "Get medical license",
+      "Join hospital or start practice"
+    ],
+    "certifications": [
+      "MD/MBBS",
+      "Medical License",
+      "Specialty Board Certification",
+      "Advanced Life Support (ALS)"
+    ],
+    "future_scope": "Medicine remains a stable, well-respected career with high demand. Specializations like psychiatry and geriatrics are in high demand."
+  },
+  "Dentist (BDS)": {
+    "description": "Diagnoses and treats dental diseases, provides preventive and restorative dental care.",
+    "education": ["Bachelor of Dental Surgery (BDS)", "Dental Specialization", "Board Certification"],
+    "skills": ["Dental Procedures", "Patient Management", "Precision", "Communication", "Manual Dexterity"],
+    "interests": ["Healthcare", "Dentistry", "Patient Care", "Precision Work"],
+    "salary_range": "$120,000 - $200,000",
+    "roadmap": [
+      "Complete pre-dental science courses",
+      "Take NEET/DAT examination",
+      "Attend dental school (4 years)",
+      "Complete internship",
+      "Get dental license",
+      "Join dental clinic or start practice",
+      "Consider specialization if desired"
+    ],
+    "certifications": [
+      "BDS (Bachelor of Dental Surgery)",
+      "Dental License",
+      "Specialization Certification",
+      "CPR & Emergency Care"
+    ],
+    "future_scope": "Dentistry offers good income and job security with growing demand for cosmetic and preventive dentistry."
+  },
+  "Pharmacist": {
+    "description": "Prepares medications, ensures proper use, and counsels patients on drug therapy.",
+    "education": ["Doctor of Pharmacy (PharmD)", "B.Pharm", "Pharmacy Residency (optional)"],
+    "skills": ["Pharmaceutical Knowledge", "Patient Care", "Medication Management", "Communication", "Attention to Detail"],
+    "interests": ["Healthcare", "Medicine", "Chemistry", "Helping People"],
+    "salary_range": "$120,000 - $160,000",
+    "roadmap": [
+      "Complete pre-pharmacy courses (chemistry, biology)",
+      "Take NEET/GPAT examination",
+      "Complete B.Pharm program (4 years)",
+      "Pass licensing exams",
+      "Get pharmacy license",
+      "Gain experience in pharmacy setting",
+      "Consider specialization"
+    ],
+    "certifications": [
+      "B.Pharm/PharmD",
+      "Pharmacy License",
+      "GPAT (Graduate Pharmacy Aptitude Test)",
+      "Clinical Pharmacy Certification"
+    ],
+    "future_scope": "Pharmacy is stable with consistent demand. Opportunities exist in retail, hospital, clinical, and specialized pharmacy settings."
+  },
+  "Nurse (RN)": {
+    "description": "Provides patient care, executes treatment plans, and collaborates with medical team.",
+    "education": ["Associate Degree in Nursing (ADN)", "Bachelor of Science in Nursing (BSN)", "Nursing Certification"],
+    "skills": ["Patient Care", "Communication", "Medical Knowledge", "Critical Thinking", "Compassion", "Teamwork"],
+    "interests": ["Healthcare", "Helping People", "Medicine", "Teamwork"],
+    "salary_range": "$60,000 - $110,000",
+    "roadmap": [
+      "Complete nursing prerequisites",
+      "Enroll in nursing program (3-4 years)",
+      "Gain clinical experience during school",
+      "Pass NCLX/nursing examination",
+      "Get nursing license (RN)",
+      "Gain experience as RN",
+      "Consider specialization or advanced degrees"
+    ],
+    "certifications": [
+      "Registered Nurse (RN) License",
+      "NCLX (Nursing Licensure Examination)",
+      "Critical Care Nurse (CCRN)",
+      "Emergency Nurse (CEN)"
+    ],
+    "future_scope": "Nursing is one of the fastest-growing healthcare professions with 16% job growth. High demand and various specialization options available."
+  },
+  "Physiotherapist": {
+    "description": "Uses physical methods to promote healing and restore function in patients with injuries or disabilities.",
+    "education": ["B.P.T (Bachelor of Physiotherapy)", "M.P.T (Master of Physiotherapy)", "Specialization Diploma"],
+    "skills": ["Patient Assessment", "Exercise Prescription", "Manual Therapy", "Communication", "Empathy"],
+    "interests": ["Healthcare", "Fitness", "Rehabilitation", "Helping People"],
+    "salary_range": "$50,000 - $100,000",
+    "roadmap": [
+      "Complete pre-PT science courses",
+      "Enroll in B.P.T program (4 years)",
+      "Gain clinical internship experience",
+      "Pass licensing examination",
+      "Get physiotherapy license",
+      "Start practice or join clinic",
+      "Consider specialization"
+    ],
+    "certifications": [
+      "B.P.T (Bachelor of Physiotherapy)",
+      "Physiotherapy License",
+      "Orthopedic Specialist",
+      "Sports Physiotherapy Certification"
+    ],
+    "future_scope": "Physiotherapy is growing with sports industry and aging population. Career progression to management is possible."
+  },
+  "Medical Laboratory Technician": {
+    "description": "Performs laboratory tests on patient samples to help diagnose diseases and monitor treatment.",
+    "education": ["Diploma in Medical Laboratory Technology", "B.Sc MLT", "Certification programs"],
+    "skills": ["Lab Analysis", "Precision", "Sample Handling", "Data Recording", "Quality Control"],
+    "interests": ["Healthcare", "Science", "Attention to Detail", "Laboratory Work"],
+    "salary_range": "$40,000 - $80,000",
+    "roadmap": [
+      "Complete high school with science subjects",
+      "Enroll in MLT diploma/degree program (2-3 years)",
+      "Gain laboratory experience",
+      "Pass certification examination",
+      "Get MLT license/certification",
+      "Work in hospital or diagnostic center"
+    ],
+    "certifications": [
+      "MLT Diploma/Degree",
+      "Medical Laboratory Technician License",
+      "ASCP (American Society for Clinical Pathology)",
+      "ISO Certified Lab Technician"
+    ],
+    "future_scope": "Lab technicians have steady demand in hospitals, diagnostic centers, and research institutions."
+  },
+  "Radiologist/Radiology Technician": {
+    "description": "Uses medical imaging techniques to diagnose diseases and guide treatment procedures.",
+    "education": ["B.Sc Radiography", "MBBS + Radiology Specialization", "Certification programs"],
+    "skills": ["Medical Imaging", "Patient Safety", "Technical Skills", "Problem Solving", "Communication"],
+    "interests": ["Healthcare", "Technology", "Diagnosis", "Science"],
+    "salary_range": "$60,000 - $150,000",
+    "roadmap": [
+      "Complete science prerequisites",
+      "Enroll in radiography program (3-4 years)",
+      "Gain hands-on imaging experience",
+      "Pass certification examination",
+      "Get radiology technician license",
+      "Work in hospital or imaging center"
+    ],
+    "certifications": [
+      "B.Sc Radiography",
+      "Radiology Technician License",
+      "ARRT (American Registry of Radiologic Technologists)",
+      "Specialty Certifications (CT, MRI, Ultrasound)"
+    ],
+    "future_scope": "Medical imaging is essential in modern healthcare with growing demand for specialists in different modalities."
+  },
+  "Nutritionist/Dietitian": {
+    "description": "Plans nutrition programs and counsels patients on healthy eating habits for disease management.",
+    "education": ["B.Sc Nutrition & Dietetics", "M.Sc Nutrition", "Dietitian Certification"],
+    "skills": ["Nutrition Knowledge", "Counseling", "Menu Planning", "Communication", "Research"],
+    "interests": ["Healthcare", "Nutrition", "Health Promotion", "Science"],
+    "salary_range": "$50,000 - $90,000",
+    "roadmap": [
+      "Complete science and health courses",
+      "Enroll in nutrition program (4 years)",
+      "Complete internship",
+      "Pass dietitian examination",
+      "Get dietitian/nutritionist license",
+      "Work in hospital, clinic, or community health"
+    ],
+    "certifications": [
+      "B.Sc Nutrition & Dietetics",
+      "Registered Dietitian (RD/RDN)",
+      "CDRF (Certified Dietetics Practitioner)",
+      "Specialty Certifications"
+    ],
+    "future_scope": "Nutrition field is growing with increased awareness of health and diet-related diseases."
+  }
+}
+

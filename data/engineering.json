@@ -1,0 +1,186 @@
+{
+  "Civil Engineer": {
+    "description": "Designs and supervises construction of buildings, bridges, roads, and other infrastructure.",
+    "education": ["B.Tech Civil Engineering", "M.Tech Civil Engineering", "Professional License"],
+    "skills": ["CAD Design", "Project Management", "Structural Analysis", "Technical Drawing", "Problem Solving"],
+    "interests": ["Engineering", "Construction", "Design", "Infrastructure"],
+    "salary_range": "$60,000 - $120,000",
+    "roadmap": [
+      "Complete engineering entrance exam",
+      "Enroll in B.Tech Civil Engineering (4 years)",
+      "Gain internship experience",
+      "Learn CAD software (AutoCAD, STAAD Pro)",
+      "Pass professional engineering examination",
+      "Get engineering license",
+      "Work on construction projects"
+    ],
+    "certifications": [
+      "B.Tech Civil Engineering",
+      "Professional Engineer (PE) License",
+      "GATE (Graduate Aptitude Test for Engineering)",
+      "AutoCAD Certification"
+    ],
+    "future_scope": "Infrastructure development and urbanization ensure steady demand for civil engineers globally."
+  },
+  "Mechanical Engineer": {
+    "description": "Designs, develops, and tests mechanical equipment and machinery systems.",
+    "education": ["B.Tech Mechanical Engineering", "M.Tech Mechanical Engineering", "Professional License"],
+    "skills": ["Mechanical Design", "CAD", "Thermodynamics", "Problem Solving", "Project Management"],
+    "interests": ["Engineering", "Mechanical Design", "Manufacturing", "Innovation"],
+    "salary_range": "$60,000 - $130,000",
+    "roadmap": [
+      "Complete engineering entrance exam",
+      "Enroll in B.Tech Mechanical Engineering (4 years)",
+      "Learn CAD and simulation tools",
+      "Gain industrial internship",
+      "Pass professional engineering exam",
+      "Get engineering license",
+      "Work in manufacturing/design industries"
+    ],
+    "certifications": [
+      "B.Tech Mechanical Engineering",
+      "Professional Engineer (PE) License",
+      "ASME (American Society of Mechanical Engineers) Certification",
+      "CATIA/SOLIDWORKS Certification"
+    ],
+    "future_scope": "Mechanical engineers are needed in manufacturing, aerospace, automotive, and renewable energy sectors."
+  },
+  "Electrical Engineer": {
+    "description": "Designs, develops, tests, and supervises electrical equipment and systems.",
+    "education": ["B.Tech Electrical Engineering", "M.Tech Electrical Engineering", "Professional License"],
+    "skills": ["Circuit Design", "Power Systems", "Control Systems", "CAD", "Problem Solving"],
+    "interests": ["Engineering", "Electricity", "Power Systems", "Innovation"],
+    "salary_range": "$70,000 - $140,000",
+    "roadmap": [
+      "Complete engineering entrance exam",
+      "Enroll in B.Tech Electrical Engineering (4 years)",
+      "Learn MATLAB and simulation software",
+      "Gain hands-on lab experience",
+      "Pass professional engineering exam",
+      "Get engineering license",
+      "Work in power, electrical, or energy companies"
+    ],
+    "certifications": [
+      "B.Tech Electrical Engineering",
+      "Professional Engineer (PE) License",
+      "IEEE (Institute of Electrical and Electronics Engineers) Membership",
+      "MATLAB Certification"
+    ],
+    "future_scope": "Electrical engineers are essential in power generation, distribution, and renewable energy sectors with strong demand."
+  },
+  "Electronics Engineer": {
+    "description": "Designs and develops electronic equipment, devices, and systems.",
+    "education": ["B.Tech Electronics Engineering", "M.Tech Electronics", "Professional License"],
+    "skills": ["Circuit Design", "Microcontrollers", "PCB Design", "Testing", "Problem Solving"],
+    "interests": ["Engineering", "Electronics", "Technology", "Innovation"],
+    "salary_range": "$65,000 - $135,000",
+    "roadmap": [
+      "Complete engineering entrance exam",
+      "Enroll in B.Tech Electronics Engineering (4 years)",
+      "Learn circuit design and microcontrollers",
+      "Gain embedded systems experience",
+      "Pass professional engineering exam",
+      "Get engineering license",
+      "Work in electronics/semiconductor industries"
+    ],
+    "certifications": [
+      "B.Tech Electronics Engineering",
+      "Professional Engineer (PE) License",
+      "Embedded Systems Certification",
+      "Microcontroller Programming Certificate"
+    ],
+    "future_scope": "Electronics engineers are crucial in consumer electronics, telecommunications, and IoT industries."
+  },
+  "Chemical Engineer": {
+    "description": "Designs and operates equipment and processes for manufacturing chemicals and chemical products.",
+    "education": ["B.Tech Chemical Engineering", "M.Tech Chemical Engineering", "Professional License"],
+    "skills": ["Process Design", "Thermodynamics", "Safety Management", "Simulation Software", "Problem Solving"],
+    "interests": ["Engineering", "Chemistry", "Manufacturing", "Sustainability"],
+    "salary_range": "$70,000 - $140,000",
+    "roadmap": [
+      "Complete engineering entrance exam",
+      "Enroll in B.Tech Chemical Engineering (4 years)",
+      "Learn ASPEN and process simulation",
+      "Gain plant internship experience",
+      "Pass professional engineering exam",
+      "Get engineering license",
+      "Work in chemical/petrochemical industries"
+    ],
+    "certifications": [
+      "B.Tech Chemical Engineering",
+      "Professional Engineer (PE) License",
+      "Safety Management Certification",
+      "ASPEN Process Simulation Certificate"
+    ],
+    "future_scope": "Chemical engineers are needed in pharmaceuticals, petrochemicals, and green energy sectors."
+  },
+  "Aerospace Engineer": {
+    "description": "Designs and develops aircraft, spacecraft, and related systems.",
+    "education": ["B.Tech Aerospace Engineering", "M.Tech Aerospace", "Professional License"],
+    "skills": ["Aerodynamics", "CAD Design", "Control Systems", "Structural Analysis", "Problem Solving"],
+    "interests": ["Engineering", "Aviation", "Space Technology", "Innovation"],
+    "salary_range": "$80,000 - $160,000",
+    "roadmap": [
+      "Complete engineering entrance exam",
+      "Enroll in B.Tech Aerospace Engineering (4 years)",
+      "Learn CFD and structural analysis",
+      "Gain aerospace industry internship",
+      "Pass professional engineering exam",
+      "Get engineering license",
+      "Work in aviation or space agencies"
+    ],
+    "certifications": [
+      "B.Tech Aerospace Engineering",
+      "Professional Engineer (PE) License",
+      "AIAA (American Institute of Aeronautics and Astronautics) Membership",
+      "CFD Software Certification"
+    ],
+    "future_scope": "Aerospace engineering is growing with space exploration and commercial aviation demand."
+  },
+  "Structural Engineer": {
+    "description": "Designs and analyzes structures to ensure they can safely bear loads and stresses.",
+    "education": ["B.Tech Civil/Structural Engineering", "M.Tech Structural Engineering", "Professional License"],
+    "skills": ["Structural Analysis", "STAAD Pro", "Design Codes", "CAD", "Problem Solving"],
+    "interests": ["Engineering", "Design", "Safety", "Construction"],
+    "salary_range": "$70,000 - $140,000",
+    "roadmap": [
+      "Complete engineering entrance exam",
+      "Enroll in Civil/Structural Engineering (4 years)",
+      "Master STAAD Pro and design software",
+      "Learn structural design codes",
+      "Pass professional engineering exam",
+      "Get engineering license",
+      "Design structures for construction companies"
+    ],
+    "certifications": [
+      "B.Tech Structural Engineering",
+      "Professional Engineer (PE) License",
+      "STAAD Pro Certification",
+      "Structural Design Codes Certification"
+    ],
+    "future_scope": "Structural engineers are essential for safe infrastructure with growing demand in construction and retrofitting."
+  },
+  "Environmental Engineer": {
+    "description": "Develops solutions to environmental problems related to pollution and waste management.",
+    "education": ["B.Tech Environmental Engineering", "M.Tech Environmental", "Professional License"],
+    "skills": ["Waste Management", "Water Treatment", "Air Quality", "Environmental Assessment", "Problem Solving"],
+    "interests": ["Engineering", "Environment", "Sustainability", "Health"],
+    "salary_range": "$60,000 - $120,000",
+    "roadmap": [
+      "Complete engineering entrance exam",
+      "Enroll in Environmental Engineering (4 years)",
+      "Learn water and waste treatment",
+      "Gain environmental consultancy experience",
+      "Pass professional engineering exam",
+      "Get engineering license",
+      "Work on environmental projects"
+    ],
+    "certifications": [
+      "B.Tech Environmental Engineering",
+      "Professional Engineer (PE) License",
+      "Environmental Impact Assessment Certificate",
+      "ISO 14001 Certification"
+    ],
+    "future_scope": "Environmental engineers are crucial for sustainability and climate change mitigation with growing opportunities."
+  }
+}
